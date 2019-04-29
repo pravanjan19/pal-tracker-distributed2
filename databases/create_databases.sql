@@ -19,8 +19,3 @@ CREATE DATABASE tracker_allocations_test;
 CREATE DATABASE tracker_backlog_test;
 CREATE DATABASE tracker_registration_test;
 CREATE DATABASE tracker_timesheets_test;
-
-CREATE DATABASE tracker_allocations_pravanjan;
-CREATE DATABASE tracker_backlog_pravanjan;
-CREATE DATABASE tracker_registration_pravanjan;
-CREATE DATABASE tracker_timesheets_pravanjan;

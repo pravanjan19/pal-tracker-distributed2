@@ -1,12 +1,12 @@
 applications:
-- name: tracker-allocations-pravanjan
-  path: ./applications/allocations-server/build/libs/allocations-server.jar
-  routes:
-  - route: allocations-pal-pravanjan.apps.dev.pcf-aws.com
-  memory: 1G
-  instances: 1
-  env:
-    REGISTRATION_SERVER_ENDPOINT: http://FILL_ME_IN
-    JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 11.+ } }'
-  services:
-  - tracker-allocations-database
+  - name: tracker-allocations-pravanjan
+    path: ./applications/allocations-server/build/libs/allocations-server.jar
+    routes:
+      - route: allocations-pal-pravanjan.apps.dev.pcf-aws.com
+    memory: 1G
+    instances: 1
+    env:
+      JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 11.+ } }'
+    services:
+      - tracker-allocations-database
+      - tracker-service-registry

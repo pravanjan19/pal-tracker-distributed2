@@ -1,12 +1,12 @@
 applications:
-- name: tracker-backlog-pravanjan
-  path: ./applications/backlog-server/build/libs/backlog-server.jar
-  routes:
-  - route: backlog-pal-pravanjan.apps.dev.pcf-aws.com
-  memory: 1G
-  instances: 1
-  env:
-    REGISTRATION_SERVER_ENDPOINT: http://FILL_ME_IN
-    JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 11.+ } }'
-  services:
-  - tracker-backlog-database
+  - name: tracker-backlog-pravanjan
+    path: ./applications/backlog-server/build/libs/backlog-server.jar
+    routes:
+      - route: backlog-pal-pravanjan.apps.dev.pcf-aws.com
+    memory: 1G
+    instances: 1
+    env:
+      JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 11.+ } }'
+    services:
+      - tracker-backlog-database
+      - tracker-service-registry
