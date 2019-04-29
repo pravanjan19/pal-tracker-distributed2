@@ -73,7 +73,7 @@ public class FlowTest {
     }
 
     @Test
-    public void testBasicFlow() throws Exception {
+    public void testBasicFlow() {
         Response response;
 
         response = httpClient.get(registrationServerUrl("/"));
